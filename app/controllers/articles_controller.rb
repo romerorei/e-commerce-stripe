@@ -16,8 +16,23 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def create
+    @article = Article.new(article_params)
+    if @article.save
+      flash[:success] = "El Articulo fue creado"
+      redirect_to @article
+    else
+      flash[:error] = "Error al crear el articulo"
+      render :new
+    end
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :body, :price, :private)
   end
 end
