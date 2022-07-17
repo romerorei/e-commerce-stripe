@@ -24,7 +24,7 @@
         <div class="flex space-x-8 items-center">
           <% if user_signed_in? %>
             <div class="flex flex-col items-end">
-              <%= link_to current_user.email, "#", class: 'font-bold text-sm text-blueGrey-700 hover:text-vividGreen-500' %>
+              <%= link_to current_user.email, profile_path, class: 'font-bold text-sm text-blueGrey-700 hover:text-vividGreen-500' %>
               <%= button_to 'Cerrar Sesión', destroy_user_session_path, method: :get, class: 'font-bold text-vividGreen-500 uppercase text-sm' %>
             </div>
             <%= link_to current_orders_path, class: "flex flex-row items-center text-blueGrey-700" do %>

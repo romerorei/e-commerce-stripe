@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   end
 
   post '/webhook', to:'webhook#receive'
+
+  get '/profile', to: 'users#profile'
 end
