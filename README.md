@@ -1,9 +1,5 @@
-# Editorial App
 
-Aplicación que construiremos a lo largo del curso de **Integración de Pagos en Rails con Stripe** en Código Facilito.
-
-Esta es la primera versión de la app, la que será la base para los mini proyectos del curso.
-En esta versión, tenemos una lista de artículos, los cuáles pueden ser públicos o privados. Los artículos privados por defecto no se pueden leer, pero si inicias sesión tienes acceso a estos artículos.
+# Mini E-commerce con pagos de Stripe
 
 ## Tech Stack
 
