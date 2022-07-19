@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subscriptions, only: [:index]
   #get 'webhook/receive'
   devise_for :users
   root to: 'articles#index'
@@ -11,7 +12,8 @@ Rails.application.routes.draw do
     resources :checkout, only: [:create]
   end
 
+  resources :checkout, only: [:create]
   post '/webhook', to:'webhook#receive'
-
   get '/profile', to: 'users#profile'
+
 end
